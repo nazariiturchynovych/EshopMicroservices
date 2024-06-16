@@ -11,6 +11,9 @@ builder.Services.AddMediatR(config =>
     config.AddOpenBehavior(typeof(LoggingBehavior<,>));
 });
 
+builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
+
+
 builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 
 
