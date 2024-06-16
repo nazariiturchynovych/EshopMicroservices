@@ -5,7 +5,7 @@ builder.Services.AddMediatR(config => { config.RegisterServicesFromAssembly(type
 
 builder.Services.AddMarten(opts =>
 {
-    opts.Connection(builder.Configuration.GetConnectionString("Database")!);    
+    opts.Connection(builder.Configuration.GetConnectionString("Database")!);
 }).UseLightweightSessions();
 
 var app = builder.Build();
