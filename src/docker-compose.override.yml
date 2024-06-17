@@ -44,6 +44,7 @@ services:
     depends_on:
       - basketdb
       - distributedcache
+      - discount.grpc
     ports:
       - "6001:8080"
       - "6061:8081"
@@ -77,6 +78,7 @@ services:
       - ASPNETCORE_HTTPS_PORTS=8081
       - ASPNETCORE_Kestrel__Certificates__Default__Password=mypass
       - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
+      - ConnectionStrings__Database=Data Source=discountdb
       - ConnectionStrings__Database=Data Source=discountdb
     ports:
       - "6002:8080"
