@@ -7,3 +7,4 @@ global using FluentValidation;
 global using Microsoft.EntityFrameworkCore;
 global using Ordering.Application.Exceptions;
 global using Ordering.Application.Extensions;
+global using MediatR;

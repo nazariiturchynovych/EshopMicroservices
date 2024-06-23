@@ -1,5 +1,4 @@
-﻿using MediatR;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Ordering.Domain.Events;
 
 namespace Ordering.Application.Orders.EventHandlers.Domain;
