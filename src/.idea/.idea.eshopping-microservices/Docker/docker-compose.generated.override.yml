@@ -56,3 +56,21 @@ services:
     - "/Users/nazariiturchynovych/RiderProjects/EshopMicroservices/src/Services/Discount/Discount.Grpc:/app:rw"
     - "/Users/nazariiturchynovych/RiderProjects/EshopMicroservices/src:/src:rw"
     working_dir: "/app"
+  ordering.api:
+    build:
+      context: "/Users/nazariiturchynovych/RiderProjects/EshopMicroservices/src"
+      dockerfile: "Services/Ordering/Ordering.API/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net8.0/Ordering.API.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "orderingapi:dev"
+    ports: []
+    volumes:
+    - "/Users/nazariiturchynovych/.nuget/packages:/home/app/.nuget/packages"
+    - "/Users/nazariiturchynovych/RiderProjects/EshopMicroservices/src/Services/Ordering/Ordering.API:/app:rw"
+    - "/Users/nazariiturchynovych/RiderProjects/EshopMicroservices/src:/src:rw"
+    working_dir: "/app"
